@@ -19,6 +19,7 @@ sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo apt install mono-complete -y 
+sudo git clone https://github.com/Colonel-Ltd/sec.git cc
 sudo adduser COLONEL chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
