@@ -1,5 +1,5 @@
 #! /bin/bash
-printf "Installing RDP Be Patience... " >&2
+printf "Installing RDP Be Patience.. " >&2
 {
 sudo useradd -m COLONEL
 sudo adduser COLONEL sudo
