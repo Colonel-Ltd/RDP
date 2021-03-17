@@ -19,8 +19,6 @@ sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo apt install mono-complete -y 
-sudo add-apt-repository ppa:xubuntu-dev/xfce-4.12
-sudo add-apt-repository ppa:xubuntu-dev/extras
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo adduser COLONEL chrome-remote-desktop
