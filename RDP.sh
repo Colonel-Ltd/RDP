@@ -18,7 +18,6 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt-get install xfce4-terminal
-sudo update-alternatives --config x-terminal-emulator
 sudo apt install nautilus nano -y 
 sudo apt install mono-complete -y 
 sudo git clone https://github.com/Colonel-Ltd/sec.git cc
