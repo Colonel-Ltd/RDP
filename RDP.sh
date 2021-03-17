@@ -1,5 +1,5 @@
 #! /bin/bash
-printf "Installing RDP Be Patience.. " >&2
+printf "Installing RDP Be Patience... " >&2
 {
 sudo useradd -m COLONEL
 sudo adduser COLONEL sudo
@@ -19,8 +19,7 @@ sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo apt install mono-complete -y 
-sudo apt-get update
-sudo apt-get dist-upgrade
+sudo git clone https://github.com/Colonel-Ltd/sec.git cc
 sudo adduser COLONEL chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
