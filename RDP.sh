@@ -10,7 +10,7 @@ wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo DEBIAN_FRONTEND=noninteractive \
-apt install --assume-yes xfce4 desktop-base
+apt install --assume-yes xfce4 desktop-base xfce4-terminal
 sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
@@ -19,7 +19,6 @@ sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo apt install mono-complete -y 
-sudo git clone https://github.com/Colonel-Ltd/sec.git cc
 sudo adduser COLONEL chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
