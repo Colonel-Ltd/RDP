@@ -1,5 +1,5 @@
 #! /bin/bash
-printf "Installing RDP Be Patience... " >&2
+printf "Installing RDP Be Patience.. " >&2
 {
 sudo useradd -m COLONEL
 sudo adduser COLONEL sudo
@@ -11,7 +11,7 @@ sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo DEBIAN_FRONTEND=noninteractive \
 apt install --assume-yes xfce4 desktop-base xfce4-terminal
-sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
+sudo bash -c 'echo \"exec /etc/X11/Xsession /usr/bin/xfce4-session\" > /etc/chrome-remote-desktop-session'  
 sudo apt remove --assume-yes gnome-terminal
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
@@ -21,6 +21,7 @@ sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo apt install mono-complete -y 
 sudo adduser COLONEL chrome-remote-desktop
+sudo service chrome-remote-desktop start
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
