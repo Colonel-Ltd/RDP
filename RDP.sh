@@ -1,25 +1,24 @@
 #! /bin/bash
-printf "Installing RDP Be Patience.. " >&2
+printf "Installing RDP Be Patience... " >&2
 {
 sudo useradd -m COLONEL
 sudo adduser COLONEL sudo
-echo 'COLONEL:8426' | sudo chpasswd
+echo 'COLONEL:greentree' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 sudo dpkg --install chrome-remote-desktop_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
-sudo export DEBIAN_FRONTEND=noninteractive
-apt install --assume-yes xfce4 desktop-base xfce4-terminal
-sudo bash -c 'echo \"exec /etc/X11/Xsession /usr/bin/xfce4-session\" > /etc/chrome-remote-desktop-session'  
-sudo apt remove --assume-yes gnome-terminal
+sudo DEBIAN_FRONTEND=noninteractive \
+apt install --assume-yes xfce4 desktop-base
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'  
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
+sudo apt install nautilus nano -y 
 sudo adduser COLONEL chrome-remote-desktop
-sudo service chrome-remote-desktop start
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
